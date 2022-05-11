@@ -43,7 +43,7 @@ public class MainController {
     this.mainFrame.defaultListModel.clear();
 
     employeeVector.forEach(employee -> {
-      if (employee.rankId == index + 1) {
+      if (employee.rankId == index) {
         this.mainFrame.defaultListModel.addElement(employee.name);
       }
     });

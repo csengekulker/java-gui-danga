@@ -43,6 +43,8 @@ public class MainFrame extends JFrame {
     this.defaultComboBoxModel = new DefaultComboBoxModel<>();
     this.chooseRankComboBox = new JComboBox<>(defaultComboBoxModel);
 
+    this.chooseRankComboBox.addItem("Select rank...");
+
     this.defaultListModel = new DefaultListModel<>();
     this.employeeList = new JList<>(defaultListModel);
     this.listScrollPane = new JScrollPane(employeeList);
