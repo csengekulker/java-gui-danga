@@ -2,11 +2,11 @@ package models;
 
 public class Rank {
   int id;
-  String rank;
+  public String name;
 
   // constructor 
-  public Rank(int id, String rank) {
+  public Rank(int id, String name) {
     this.id = id;
-    this.rank = rank;
+    this.name = name;
   }
 }

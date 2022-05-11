@@ -9,23 +9,36 @@
 */
 
 package views;
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.border.Border;
+
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 
 public class MainFrame extends JFrame {
   JPanel mainPanel;
 
+  public DefaultComboBoxModel<String> defaultComboBoxModel;
+  JComboBox<String> chooseRankComboBox;
+
   public MainFrame() {
 
-    setComponents();
-    setMainPanel();
+
     setFrame();
+    setMainPanel();
+    setComponents();
+
   }
 
   private void setComponents() {
+    this.defaultComboBoxModel = new DefaultComboBoxModel<>();
+    this.chooseRankComboBox = new JComboBox<>(defaultComboBoxModel);
 
+    this.mainPanel.add(chooseRankComboBox, BorderLayout.NORTH);
+    
   }
 
   private void setMainPanel() {
@@ -35,6 +48,8 @@ public class MainFrame extends JFrame {
     this.mainPanel.setLayout(
       new BorderLayout()
     );
+
+    this.add(mainPanel);
   }
 
   private void setFrame() {

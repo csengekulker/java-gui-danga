@@ -10,6 +10,9 @@
 
 package models;
 
+import java.util.Arrays;
+import java.util.Vector;
+
 public class MainModel {
   Rank[] rankArray = {
     new Rank(1, "Director"),
@@ -18,5 +21,9 @@ public class MainModel {
     new Rank(4, "Security"),
     new Rank(5, "Janitor")
   };
+
+  // convert array to vector
+
+  public Vector<Rank> rankVector = new Vector<>(Arrays.asList(rankArray));
 
 }

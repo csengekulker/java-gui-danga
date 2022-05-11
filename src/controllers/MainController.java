@@ -20,5 +20,14 @@ public class MainController {
   public MainController() {
     this.mainFrame = new MainFrame();
     this.mainModel = new MainModel();
+
+    controlComboBox();
+  }
+
+  private void controlComboBox () {
+
+    this.mainModel.rankVector.forEach(rank -> {
+      this.mainFrame.defaultComboBoxModel.addElement(rank.name);
+    });
   }
 }
