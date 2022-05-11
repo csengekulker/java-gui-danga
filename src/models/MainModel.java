@@ -33,5 +33,6 @@ public class MainModel {
 
   // convert array to vector
   public Vector<Rank> rankVector = new Vector<>(Arrays.asList(rankArray));
+  public Vector<Employee> employeeVector = new Vector<>(Arrays.asList(employeeArray));
 
 }

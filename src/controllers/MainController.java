@@ -10,6 +10,8 @@
 
 package controllers;
 
+import java.util.Vector;
+import models.Employee;
 import models.MainModel;
 import views.MainFrame;
 
@@ -22,6 +24,7 @@ public class MainController {
     this.mainModel = new MainModel();
 
     controlComboBox();
+    setEvents();
   }
 
   private void controlComboBox () {
@@ -29,5 +32,25 @@ public class MainController {
     this.mainModel.rankVector.forEach(rank -> {
       this.mainFrame.defaultComboBoxModel.addElement(rank.name);
     });
+  }
+
+  private void comboBoxAcion() {
+    int index = this.mainFrame.chooseRankComboBox.getSelectedIndex();
+
+    Vector<Employee> employeeVector = this.mainModel.employeeVector;
+
+    //delete content before new selection
+    this.mainFrame.defaultListModel.clear();
+
+    employeeVector.forEach(employee -> {
+      if (employee.rankId == index + 1) {
+        this.mainFrame.defaultListModel.addElement(employee.name);
+      }
+    });
+
+  }
+
+  private void setEvents() {
+    this.mainFrame.chooseRankComboBox.addActionListener(action -> comboBoxAcion());
   }
 }
