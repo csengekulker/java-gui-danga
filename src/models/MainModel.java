@@ -22,8 +22,16 @@ public class MainModel {
     new Rank(5, "Janitor")
   };
 
-  // convert array to vector
+  Employee[] employeeArray = {
+    new Employee(1, "Balogh Csenge", "Érd", 34234, 1),
+    new Employee(2, "Lenti Béla", "Szeged", 2341, 3),
+    new Employee(3, "Halas Ferenc", "Budapest", 7864, 4),
+    new Employee(4, "John Doe", "Szeged", 23223, 3),
+    new Employee(5, "Teknős Péter", "Érd", 11111, 2),
+    new Employee(6, "Csete Jenő", "Budapest", 3454, 5),
+  };
 
+  // convert array to vector
   public Vector<Rank> rankVector = new Vector<>(Arrays.asList(rankArray));
 
 }
