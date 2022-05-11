@@ -1,6 +1,9 @@
-## Getting Started
+# Workers
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Template
+
+This project was created from a template using VSCode. The template repository can be accessed [here](https://github.com/csengekulker/java-mvc-template). Note that this is not a final template version.
+
 
 ## Folder Structure
 

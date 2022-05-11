@@ -1,3 +1,13 @@
+/*
+* File: MainFrame.java
+* Author: Balogh Csenge
+* Copyright: 2022, Balogh Csenge
+* Group: Szoft_I_N
+* Date: 2022-05-11
+* Github: https://github.com/csengekulker/
+* Licenc: GNU GPL
+*/
+
 package views;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -21,6 +31,7 @@ public class MainFrame extends JFrame {
   private void setMainPanel() {
     this.mainPanel = new JPanel();
 
+    // layout for mainpanel
     this.mainPanel.setLayout(
       new BorderLayout()
     );
@@ -29,14 +40,12 @@ public class MainFrame extends JFrame {
   private void setFrame() {
     this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     this.setSize(400, 300);
-    this.setTitle("Pick your fruits");
+    this.setTitle("Workers");
     this.setVisible(true);
 
     // layout for window
     this.setLayout(
-      new FlowLayout(
-
-      )
+      new FlowLayout()
     );
   }
 }
